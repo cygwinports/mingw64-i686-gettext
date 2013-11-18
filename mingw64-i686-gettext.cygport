@@ -1,5 +1,8 @@
+CROSS_HOST="i686-w64-mingw32"
+inherit cross
+
 NAME="mingw64-i686-gettext"
-VERSION=0.18.1.1
+VERSION=0.18.3.1
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="gettext/libintl for Win32 toolchain"
@@ -10,9 +13,6 @@ mingw64-i686-gcc cross compiler, and installs into the
 HOMEPAGE="http://www.gnu.org/software/gettext/"
 SRC_URI="mirror://gnu/gettext/gettext-${VERSION}.tar.gz"
 SRC_DIR="gettext-${VERSION}"
-CROSS_HOST="i686-w64-mingw32"
-ORIG_PN="gettext"
-inherit cross
 
 MAKEOPTS+=" bin_PROGRAMS= bin_SCRIPTS= gettextsrc_DATA= DOC_FILES= JAVADOC2_FILES= "
 MAKEOPTS+=" CATALOGS= HTMLS= INFO_DEPS= man_MANS= man_HTML= notrans_man_MANS= "
